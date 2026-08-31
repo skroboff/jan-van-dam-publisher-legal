@@ -1,0 +1,177 @@
+<title>Jan Van Dam Publisher Privacy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+  :root {
+    --bg: #F4F6F5;
+    --surface: #FFFFFF;
+    --ink: #1A1F1D;
+    --ink-muted: #55605C;
+    --accent: #1F6E5C;
+    --rule: #D8DEDB;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141816;
+      --surface: #1B211F;
+      --ink: #E9EDEB;
+      --ink-muted: #9DA9A5;
+      --accent: #4FBF9E;
+      --rule: #2A322F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141816;
+    --surface: #1B211F;
+    --ink: #E9EDEB;
+    --ink-muted: #9DA9A5;
+    --accent: #4FBF9E;
+    --rule: #2A322F;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 28px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 12px;
+  }
+  .masthead .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .masthead h1 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(28px, 4.5vw, 40px);
+    margin: 0;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-muted);
+    padding: 14px 0 8px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 36px;
+  }
+  section {
+    margin-bottom: 36px;
+  }
+  h2 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: var(--ink);
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  p {
+    margin: 0 0 14px;
+    max-width: 62ch;
+    color: var(--ink);
+  }
+  ul {
+    margin: 0 0 14px;
+    padding-left: 22px;
+    max-width: 62ch;
+  }
+  li { margin-bottom: 8px; }
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin: 0 0 36px;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  strong { font-weight: 600; }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-muted);
+  }
+</style>
+
+<div class="page">
+  <div class="masthead">
+    <span class="eyebrow">Legal &middot; Privacy</span>
+    <h1>Jan Van Dam Publisher &mdash; Privacy Policy</h1>
+  </div>
+  <div class="meta">
+    <span>Effective&nbsp;31&nbsp;Aug&nbsp;2026</span>
+    <span>Applies to: TikTok, Instagram &amp; YouTube integrations</span>
+  </div>
+
+  <div class="callout">
+    <p>Jan Van Dam Publisher is a single-purpose internal tool: it publishes pre-produced short-form video news clips to a small set of social accounts that its operator personally owns and has explicitly connected. It is not a public app, does not accept sign-ups, and does not collect data from anyone other than the connected account owner.</p>
+  </div>
+
+  <section>
+    <h2>What the tool does</h2>
+    <p>Jan Van Dam Publisher authenticates with TikTok (and equivalent Instagram/YouTube APIs) using the standard OAuth login flow, then uploads or posts a video file, caption, and cover image that the operator has already produced. It performs no other actions on the connected accounts.</p>
+  </section>
+
+  <section>
+    <h2>Information we access</h2>
+    <ul>
+      <li><strong>Basic profile info</strong> (via the <code>user.info.basic</code> scope) &mdash; open ID, display name, and avatar, used only to confirm which account is connected.</li>
+      <li><strong>Video publishing permission</strong> (via the <code>video.upload</code> scope) &mdash; used solely to upload the video files the operator provides.</li>
+    </ul>
+    <p>We do not access followers, direct messages, watch history, analytics, or any data beyond what is listed above.</p>
+  </section>
+
+  <section>
+    <h2>Information we do not collect</h2>
+    <p>The tool has no user accounts, no sign-up form, no analytics tracking, and no advertising integration. It never sees or stores information about anyone who later views the published content.</p>
+  </section>
+
+  <section>
+    <h2>How access tokens are stored</h2>
+    <p>OAuth access tokens are stored locally on the operator's own machine, are never transmitted to any third party, and are used exclusively to publish the content described above. A token can be revoked at any time from the connected account's own app-permissions settings, which immediately stops all access.</p>
+  </section>
+
+  <section>
+    <h2>Data retention &amp; deletion</h2>
+    <p>No personal data is retained beyond the access token itself. Revoking the app's permission on the platform side removes our ability to access the account; the operator can additionally delete the stored token directly.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If this tool's scope of access ever changes, this page will be updated and the effective date above will change accordingly.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about this policy can be sent to <a href="mailto:opt.elkisosny@gmail.com">opt.elkisosny@gmail.com</a>.</p>
+  </section>
+
+  <footer>Jan Van Dam Publisher &middot; Internal publishing tool</footer>
+</div>
